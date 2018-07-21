@@ -15,7 +15,7 @@ class MainPage extends Component {
               <div className="bookshelf-books">
                 <ol className="books-grid">
                   <li>
-
+                  	<Book/>
                   </li>
                 </ol>
               </div>
@@ -25,7 +25,7 @@ class MainPage extends Component {
               <div className="bookshelf-books">
                 <ol className="books-grid">
                   <li>
-
+                  	<Book/>
                   </li>
                 </ol>
               </div>
@@ -35,7 +35,7 @@ class MainPage extends Component {
               <div className="bookshelf-books">
                 <ol className="books-grid">
                   <li>
-                  	
+                  	<Book/>
                   </li>
                 </ol>
               </div>
