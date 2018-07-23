@@ -4,10 +4,12 @@ import React, { Component } from 'react'
 // the render method can be actually omitted and the whole Component 
 // can be turned into an ES6 arrow function with an implicit return
 
-const Book = () =>
+const Book = (props) =>
 	<div className="book">
 	  <div className="book-top">
-	    <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: '' }}></div>
+	    <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url(${props.book.imageLinks.thumbnail})`
+	    }}>
+	  	</div>
 	    <div className="book-shelf-changer">
 	      <select>
 	        <option value="move" disabled>Move to...</option>
@@ -18,8 +20,8 @@ const Book = () =>
 	      </select>
 	    </div>
 	  </div>
-	  <div className="book-title"></div>
-	  <div className="book-authors"></div>
+	  <div className="book-title">{props.book.title}</div>
+	  <div className="book-authors">{props.book.authors}</div>
 	</div>
 
 export default Book
