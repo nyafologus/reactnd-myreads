@@ -6,36 +6,31 @@ import MainPage from './MainPage.js'
 
 class BooksApp extends React.Component {
 
-state = {
-    books: [],
-    showSearchPage: true
-}
+  state = {
+    books: []
+  }
 
-componentDidMount() {
-  BooksAPI.getAll().then((books) => {
-    this.setState({ books })
-  })
-}
+  componentDidMount() {
+    BooksAPI.getAll().then((books) => {
+      this.setState({ books })
+    })
+  }
 
-render() {
+  moveShelf = (book, shelf) => {
+    BooksAPI.update(book, shelf);
+
+    BooksAPI.getAll().then((books) => {
+      this.setState({ books })
+    })
+  }
+
+  render() {
     return (
       <div className="app">
-        {this.state.showSearchPage === false && (
           <MainPage
-            books={this.state.books}
-            onNavigate = {() => ( 
-              this.setState({ showSearchPage: true })
-              )}
+            books = {this.state.books}
+            moveShelf = {this.moveShelf}
           />
-        )}
-        {this.state.showSearchPage === true && (
-          <SearchPage
-            books={this.state.books}
-            onNavigate = {() => ( 
-              this.setState({ showSearchPage: false })
-              )}
-          />
-        )}
       </div>
     )
   }

@@ -20,6 +20,8 @@ class MainPage extends Component {
 		                  <li key={book.id} >
 		                  	<Book
 		                  		book = {book}
+		                  		moveShelf = {this.props.moveShelf}
+		                  		// currentShelf = "currentlyReading"
 		                  	/>
 		                  </li>
                 		)
@@ -37,6 +39,8 @@ class MainPage extends Component {
 		                  <li key={book.id} >
 		                  	<Book
 		                  		book = {book}
+		                  		moveShelf = {this.props.moveShelf}
+		                  		// currentShelf = "wantToRead"
 		                  	/>
 		                  </li>
                 		)
@@ -54,6 +58,8 @@ class MainPage extends Component {
 		                  <li key={book.id} >
 		                  	<Book
 		                  		book = {book}
+		                  		moveShelf = {this.props.moveShelf}
+		                  		// currentShelf = "read"
 		                  	/>
 		                  </li>
                 		)
@@ -64,7 +70,7 @@ class MainPage extends Component {
           </div>
         </div>
         <div className="open-search">
-          <a href='addAnotherBook' onClick={this.props.onNavigate}>Add a book</a>
+          <a href='addAnotherBook'>Add a book</a>
         </div>
       </div>
 		);

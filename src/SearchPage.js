@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 
 class SearchPage extends Component {
+
 	render() {
 		return (
 			<div className="search-books">
     		<div className="search-books-bar">
-        	<a className="close-search" onClick={this.props.onNavigate}>Close</a>
+        	<a className="close-search">Close</a>
         	<div className="search-books-input-wrapper">
          		{}
          	 	<input type="text" placeholder="Search by title or author"/>
