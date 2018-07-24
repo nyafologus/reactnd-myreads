@@ -70,7 +70,7 @@ class MainPage extends Component {
           </div>
         </div>
         <div className="open-search">
-          <a href='addAnotherBook'>Add a book</a>
+          <a>Add a book</a>
         </div>
       </div>
 		);
