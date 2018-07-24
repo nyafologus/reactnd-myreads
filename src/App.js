@@ -8,7 +8,7 @@ class BooksApp extends React.Component {
 
 state = {
     books: [],
-    screen: 'search'
+    showSearchPage: true
 }
 
 componentDidMount() {
@@ -20,14 +20,20 @@ componentDidMount() {
 render() {
     return (
       <div className="app">
-        {this.state.screen === 'main' && (
+        {this.state.showSearchPage === false && (
           <MainPage
             books={this.state.books}
+            onNavigate = {() => ( 
+              this.setState({ showSearchPage: true })
+              )}
           />
         )}
-        {this.state.screen === 'search' && (
+        {this.state.showSearchPage === true && (
           <SearchPage
             books={this.state.books}
+            onNavigate = {() => ( 
+              this.setState({ showSearchPage: false })
+              )}
           />
         )}
       </div>

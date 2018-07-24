@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 // As it is a stateless functional Component with only a render method, 
 // the render method can be actually omitted and the whole Component 
