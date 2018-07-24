@@ -7,7 +7,8 @@ import MainPage from './MainPage.js'
 class BooksApp extends React.Component {
 
 state = {
-    books: []
+    books: [],
+    screen: 'search'
 }
 
 componentDidMount() {
@@ -19,8 +20,16 @@ componentDidMount() {
 render() {
     return (
       <div className="app">
+        {this.state.screen === 'main' && (
           <MainPage
-          books={this.state.books}/>
+            books={this.state.books}
+          />
+        )}
+        {this.state.screen === 'search' && (
+          <SearchPage
+            books={this.state.books}
+          />
+        )}
       </div>
     )
   }
