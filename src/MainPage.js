@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import BookShelf from './BookShelf.js'
-import Book from './Book.js'
+import { Link } from "react-router-dom"
+// import Book from './Book.js'
 
 class MainPage extends Component {
 
@@ -112,7 +113,7 @@ class MainPage extends Component {
           </div>
         </div>
         <div className="open-search">
-          <a>Add a book</a>
+        	<Link to="/SearchPage">Add a book</Link>
         </div>
       </div>
 		);
