@@ -23,6 +23,10 @@ $ git clone git@github.com:nyafologus/reactnd-project-myreads-starter.git
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). More information on how to perform common tasks can be found [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
+### Preview
+
+![MyReads](img/MyReads.png "Preview of bookshelves")
+
 ## Note on Search Terms
 
 The backend API uses a fixed set of cached search results and is limited to a particular set of search terms, which can be found in [SEARCH_TERMS.md](SEARCH_TERMS.md). That list of terms are the _only_ terms that will work with the backend, so don't be surprised if your searches for Basket Weaving or Bubble Wrap don't come back with any results.
