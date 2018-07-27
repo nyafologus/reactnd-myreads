@@ -14,16 +14,10 @@ const BookShelf = (props) =>
       		.filter(book => book.shelf === props.shelf)
       		.map(book =>
             <li key={book.id} >
-
-            	{/* Extracted Book Component */}
             	<Book
             		book = {book}
             		moveShelf = {props.moveShelf}
-            		// currentShelf = "currentlyReading"
-            		// if there is no default book cover, insert a placeholder thumbnail image
-                thumbnail={book.imageLinks ? book.imageLinks.thumbnail:`http://via.placeholder.com/128x193?text=Cover`}      
             	/>
-
             </li>
       		)
       	}

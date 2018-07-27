@@ -12,25 +12,18 @@ class SearchPage extends Component {
 	}
 
 	updateQuery = (query) => {
-		this.setState({
-			query: query
-		})
+		this.setState({query})
 		this.updateSearchedBooks(query);
 	}
 
 	updateSearchedBooks = (query) => {
 		if (query) {
-		BooksAPI.search(query).then((searchedBooks) => {
+			BooksAPI.search(query).then((searchedBooks) => {
 			this.setState({ searchedBooks })
 		})
-	} else {
+		} else {
 		this.setState({ searchedBooks: [] })
-	}
-}
-	getSearchedBooks = (query) => {
-		BooksAPI.search(query).then((searchedBooks) => {
-			this.setState({ searchedBooks })
-		})
+		}
 	}
 
 	render() {
@@ -49,16 +42,16 @@ class SearchPage extends Component {
       	</div>
         <div className="search-books-results">
           <ol className="books-grid">
-          	{this.state.searchedBooks.map(searchedBook => (
-          		<li key={searchedBook.id} >
-		                  	<Book
-		                  		book = {searchedBook}
-		                  		moveShelf = {this.props.moveShelf}
-		                  		// moveShelf = {this.props.moveShelf}
-		                  		// currentShelf = "read"
-		                  	/>
-		                  </li>
-          		) )}
+          	{this.state.searchedBooks
+          	.map(book => (
+          		<li key={book.id} >
+              	<Book      
+              		book = {book}
+              		moveShelf = {this.props.moveShelf}
+              		shelf={book.shelf}
+              	/>
+		          </li>
+          	))}
           </ol>
         </div>
       </div>
