@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import * as BooksAPI from './BooksAPI'
 import './App.css'
 import { Route } from "react-router-dom"
-import SearchPage from './SearchPage.js'
 import MainPage from './MainPage.js'
+import SearchPage from './SearchPage.js'
 
 
 class BooksApp extends Component {
@@ -24,7 +24,7 @@ class BooksApp extends Component {
     BooksAPI.getAll().then((books) => {
       this.setState({ books })
     })
-  }
+  }     
 
   render() {
     return (
@@ -47,7 +47,6 @@ class BooksApp extends Component {
             />
           )}
         />
-
       </div>
     )
   }

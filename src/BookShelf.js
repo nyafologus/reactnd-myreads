@@ -11,12 +11,13 @@ const BookShelf = (props) =>
     <div className="bookshelf-books">
       <ol className="books-grid">
       	{props.books
-      		.filter(book => book.shelf === props.shelf)
-      		.map(book =>
+      	.filter(book => book.shelf === props.shelf)
+      	.map(book =>
             <li key={book.id} >
             	<Book
-            		book = {book}
-            		moveShelf = {props.moveShelf}
+          		book = {book}
+          		moveShelf = {props.moveShelf}
+		          books = {props.books}
             	/>
             </li>
       		)
