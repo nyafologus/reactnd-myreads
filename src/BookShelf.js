@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Book from './Book.js'
 
 // As it is a stateless functional Component with only a render method, 
@@ -25,5 +26,11 @@ const BookShelf = (props) =>
       </ol> 
     </div>
   </div>
+
+BookShelf.propTypes = {
+  book: PropTypes.object.isRequired,
+  books: PropTypes.array.isRequired,
+  moveShelf: PropTypes.func.isRequired
+}
 
 export default BookShelf

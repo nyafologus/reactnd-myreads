@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 class MatchShelf extends Component {
 
@@ -25,6 +26,12 @@ class MatchShelf extends Component {
       </select>
     )
   }
+}
+
+MatchShelf.propTypes = {
+  book: PropTypes.object.isRequired,
+  books: PropTypes.array.isRequired,
+  moveShelf: PropTypes.func.isRequired
 }
 
 export default MatchShelf

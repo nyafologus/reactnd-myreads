@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom"
 import * as BooksAPI from './BooksAPI'
+import PropTypes from 'prop-types'
 import Book from './Book.js'
 
 
@@ -61,6 +62,12 @@ class SearchPage extends Component {
       </div>
 		);
 	}
+}
+
+SearchPage.propTypes = {
+  book: PropTypes.object.isRequired,
+  books: PropTypes.array.isRequired,
+  moveShelf: PropTypes.func.isRequired
 }
 
 export default SearchPage
