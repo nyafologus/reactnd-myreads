@@ -29,7 +29,6 @@ class MatchShelf extends Component {
 }
 
 MatchShelf.propTypes = {
-  book: PropTypes.object.isRequired,
   books: PropTypes.array.isRequired,
   moveShelf: PropTypes.func.isRequired
 }
