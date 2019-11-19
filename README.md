@@ -21,7 +21,7 @@ $ git clone git@github.com:nyafologus/reactnd-project-myreads-starter.git
 
 ## Dependencies
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). More information on how to perform common tasks can be found [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). More information on how to perform common tasks can be found [here](https://github.com/facebook/create-react-app/blob/master/packages/cra-template/template/README.md).
 
 ### Preview
 
